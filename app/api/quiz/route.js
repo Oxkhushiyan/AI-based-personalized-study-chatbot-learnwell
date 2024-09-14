@@ -1,9 +1,13 @@
+import { initializeGenAI } from '../../lib/gemini';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const mySecret = process.env['GEMINI_API_KEY'];
-const genAI = new GoogleGenerativeAI(mySecret);
+export const runtime = 'edge';
 
 export async function POST(req) {
+  initializeGenAI();
+  const mySecret = process.env.GEMINI_API_KEY;
+  const genAI = new GoogleGenerativeAI(mySecret);
+
   try {
     const { topic, userInfo } = await req.json();
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });

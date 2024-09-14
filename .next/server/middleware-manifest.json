@@ -1,6 +1,26 @@
 {
   "sortedMiddleware": [],
   "middleware": {},
-  "functions": {},
+  "functions": {
+    "/api/quiz/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/app/api/quiz/route.js"
+      ],
+      "name": "app/api/quiz/route",
+      "page": "/api/quiz/route",
+      "matchers": [
+        {
+          "regexp": "^/api/quiz$",
+          "originalSource": "/api/quiz"
+        }
+      ],
+      "wasm": [],
+      "assets": []
+    }
+  },
   "version": 2
 }
