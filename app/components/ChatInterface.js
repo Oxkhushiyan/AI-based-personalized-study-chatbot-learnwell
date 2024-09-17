@@ -47,7 +47,7 @@ const ChatInterface = ({ userInfo }) => {
       console.error('Error:', error);
       setMessages((prevMessages) => [
         ...prevMessages,
-        { text: 'Sorry, I encountered an error. Please try again.', sender: 'bot' },
+        { text: formatBotResponse('Sorry, I encountered an error. Please try again.'), sender: 'bot' },
       ]);
     } finally {
       setIsTyping(false);
@@ -55,15 +55,22 @@ const ChatInterface = ({ userInfo }) => {
   };
 
   const formatBotResponse = (response) => {
-    const withoutCode = response.replace(/```[\s\S]*?```/g, '');
-    const highlighted = withoutCode.replace(
-      /\*\*(.*?)\*\*/g,
-      '<span class="font-bold text-pink-600">$1</span>'
+    if (!response || response.trim() === '') {
+      return '<p class="text-gray-500">No response received. Please try again.</p>';
+    }
+
+    // Ensure the response is properly formatted with HTML tags
+    if (!response.startsWith('<')) {
+      response = `<p>${response}</p>`;
+    }
+
+    // Add any additional formatting as needed
+    const formatted = response.replace(
+      /<div>/g,
+      '<div class="bg-gray-100 p-3 rounded-lg my-2">'
     );
-    const organized = highlighted.split('\n\n').map((para, index) => (
-      `<p key=${index} class="mb-2">${para}</p>`
-    )).join('');
-    return organized;
+
+    return formatted;
   };
 
   const handleQuizRequest = () => {
