@@ -1,24 +1,36 @@
-Welcome to the NextJS 13 base template bootstrapped using the `create-next-app`. This template supports TypeScript, but you can use normal JavaScript as well.
+<h1 align="center">Welcome to LearnWell - AI Study Chabot 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+  <a href="ttps://github.com/Oxkhushiyan/learnwell#readme" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://twitter.com/Oxkhushiyan" target="_blank">
+    <img alt="Twitter: Oxkhushiyan" src="https://img.shields.io/twitter/follow/Oxkhushiyan.svg?style=social" />
+  </a>
+</p>
 
-## Getting Started
+> This Next.js project is an AI-powered study chatbot designed to assist users by answering their academic questions in real-time. The chatbot provides brief, accurate responses across various subjects. Additionally, it offers personalized learning experiences by adapting its responses based on user details such as age, education level, and grade. By tailoring interactions, the chatbot ensures a more effective and relevant learning process for each user.
 
-Hit the run button to start the development server.
+### 🏠 [Homepage](https://github.com/Oxkhushiyan/learnwell#readme)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### ✨ [Demo](https://learnwell-delta.vercel.app)
 
-[Route Handlers](https://nextjs.org/docs/app/building-your-application/routing/route-handlers) allow you to create custom request handlers for a given route using the Web Request and Response APIs.
+## Usage
 
-The `app/api` directory is mapped to `/api/*`. Folders in this directory with files named `route.ts` are treated as [Route handlers](https://nextjs.org/docs/app/building-your-application/routing/route-handlers) instead of pages.
+```sh
+npm run dev
+```
 
-## Learn More
+## Author
 
-To learn more about Next.js, take a look at the following resources:
+👤 **Khushiyan Maywad**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Twitter: [@Oxkhushiyan](https://twitter.com/Oxkhushiyan)
+* Github: [@Oxkhushiyan](https://github.com/Oxkhushiyan)
 
-## Productionizing your Next App
+## Show your support
 
-To make your next App run smoothly in production make sure to deploy your project with [Repl Deployments](https://docs.replit.com/hosting/deployments/about-deployments)!
+Give a ⭐️ if this project helped you!
 
-You can also produce a production build by running `npm run build` and [changing the run command](https://docs.replit.com/programming-ide/configuring-repl#run) to `npm run start`.
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
